@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>周娇 · 简历 — 平面设计 / 印前排版</title>
+<meta name="description" content="周娇 · 滇池学院数字媒体技术专业 · 个人简历单页（平面设计 / 印前排版）· 法兰西特派风格">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F1E9D6'/%3E%3Crect x='4' y='4' width='56' height='56' fill='none' stroke='%23C73932' stroke-width='3'/%3E%3Crect x='12' y='12' width='40' height='40' fill='%23203142'/%3E%3Ctext x='32' y='42' font-size='26' text-anchor='middle' fill='%23F1E9D6' font-family='Georgia,serif'%3E周%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Spectral:wght@500;600;700;800&family=Noto+Serif+SC:wght@500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+  :root{
+    --cream:#F4ECDC;      /* 报纸纸（略暖） */
+    --cream-2:#EBDEC8;
+    --paper:#FFFCF3;      /* 栏目白 */
+    --ink:#1C2740;        /* 墨海军蓝 */
+    --ink-2:#2E4060;
+    --red:#C63C33;        /* 红刊头 */
+    --red-deep:#96241E;
+    --tan:#D6CCB8;        /* 桌面/背景 */
+    --muted:#6E6859;      /* 暖灰 */
+    --faint:#9A927F;
+    --line:#D8CDB4;       /* 发丝线 */
+    --line2:#A89B7E;      /* 强线 */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+    background:var(--tan);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:15px;
+    padding:28px 16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Noto Serif SC','Songti SC','SimSun',serif}
+  .latin{font-family:'Spectral','Times New Roman',serif}
+
+  /* ===== 报纸版面（微缩置景：纸张悬于桌面） ===== */
+  .sheet{
+    position:relative;
+    max-width:1120px;margin:0 auto;
+    background:var(--cream);
+    border:1px solid var(--line2);
+    box-shadow:0 20px 50px rgba(28,39,64,.20), 0 2px 8px rgba(28,39,64,.10);
+    padding:40px 48px 36px;
+    overflow:hidden;
+  }
+
+  /* ===== 报头 Masthead（对称居中） ===== */
+  .masthead{position:relative;text-align:center;padding-bottom:6px}
+  .eyebrow{
+    display:inline-block;font-size:11px;letter-spacing:4px;color:var(--red);
+    font-family:'Spectral','Times New Roman',serif;font-weight:600;text-transform:uppercase;
+  }
+  .eyebrow .zh{letter-spacing:3px;font-family:'Noto Sans SC',sans-serif}
+  .avatarwrap{
+    width:104px;height:104px;border-radius:50%;margin:16px auto 12px;padding:4px;
+    border:1px solid var(--ink);box-shadow:0 0 0 4px var(--cream),0 0 0 5px var(--red);
+  }
+  .avatar{
+    width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:top center;display:block;
+    filter:contrast(1.05) brightness(1.02) saturate(1.05);
+  }
+  .name{font-size:46px;font-weight:900;letter-spacing:10px;color:var(--ink);line-height:1.15;text-indent:10px}
+  .dateline{
+    display:flex;justify-content:center;gap:14px;color:var(--muted);
+    font-size:13.5px;margin-top:8px;letter-spacing:1px;
+  }
+  .dateline .d{color:var(--red)}
+  .kicker{
+    display:block;font-family:'Spectral','Times New Roman',serif;font-size:11px;
+    letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-top:16px;
+  }
+  .headline{
+    display:inline-block;font-size:27px;font-weight:900;color:var(--ink);letter-spacing:4px;
+    border-top:1px solid var(--ink-2);border-bottom:1px solid var(--ink-2);
+    padding:9px 28px;margin-top:8px;line-height:1.4;
+  }
+  .contacts{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:14px}
+  .contacts a{color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:7px;padding:6px 2px}
+  .contacts a:hover{color:var(--red)}
+  .contacts svg{width:15px;height:15px;flex:0 0 auto;color:var(--red)}
+  .btn-print{
+    position:absolute;top:2px;right:2px;cursor:pointer;
+    background:var(--ink);color:var(--cream);border:1px solid var(--ink);
+    border-radius:2px;padding:8px 16px;font-size:12.5px;letter-spacing:2px;font-family:inherit;
+  }
+  .btn-print:hover{background:var(--red);border-color:var(--red)}
+  .mast-rule{height:3px;background:var(--ink);position:relative;margin-top:22px}
+  .mast-rule::after{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:var(--red)}
+
+  /* ===== 目录 CONTENTS（法兰西特派招牌：报刊目录页） ===== */
+  .toc{
+    margin:22px 0 6px;border:1px solid var(--line2);background:var(--paper);
+    box-shadow:0 0 0 4px var(--cream-2);
+  }
+  .toc-head{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:9px 18px;border-bottom:1px solid var(--line);
+    font-family:'Spectral','Times New Roman',serif;font-size:12px;letter-spacing:3px;
+    color:var(--red);text-transform:uppercase;
+  }
+  .toc-head .zh{font-family:'Noto Sans SC',sans-serif;letter-spacing:2px;color:var(--ink)}
+  .toc-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+  .toc-list li{
+    display:flex;align-items:baseline;gap:9px;padding:8px 18px;
+    font-size:13.5px;color:var(--ink);border-bottom:1px dotted var(--line);
+  }
+  .toc-list li:nth-last-child(-n+2){border-bottom:0}
+  .toc-list i{font-style:normal;font-family:'Noto Serif SC','Songti SC',serif;color:var(--red);font-weight:700;font-size:13px}
+  .toc-list .t-en{margin-left:auto;color:var(--faint);font-family:'Spectral','Times New Roman',serif;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+
+  /* ===== 主栏（杂志展开：前部卷首 / 篇章专题） ===== */
+  .columns{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:34px;margin-top:28px}
+
+  /* ===== 栏目头（章节叙事） ===== */
+  .sechead{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+  .sec-no{font-family:'Noto Serif SC','Songti SC','SimSun',serif;color:var(--red);font-size:20px;font-weight:900;display:inline-block}
+  .sec-register{font-family:'Spectral','Times New Roman',serif;font-size:9.5px;color:var(--faint);letter-spacing:2px;text-transform:uppercase;margin-right:2px}
+  .sechead-body{flex:1}
+  .sec-en{display:block;font-family:'Spectral','Times New Roman',serif;font-size:10.5px;letter-spacing:3px;color:var(--red);text-transform:uppercase}
+  .sec-title{font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:20px;font-weight:700;color:var(--ink);letter-spacing:2px;margin-top:2px}
+  .secline{height:0;border:0;border-top:1px solid var(--line);position:relative;margin:0 0 18px}
+  .secline::after{content:"";position:absolute;left:0;top:-1px;width:44px;height:3px;background:var(--red)}
+
+  /* ===== 面板（双线框 · 微缩感） ===== */
+  .panel{
+    background:var(--paper);border:1px solid var(--line2);
+    box-shadow:0 0 0 4px var(--cream-2),0 0 0 5px var(--line);
+    padding:20px 22px;margin-bottom:24px;
+  }
+  .panel:last-child{margin-bottom:0}
+
+  /* 联系方式 */
+  .c-list{list-style:none}
+  .c-list li{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:14px;border-bottom:1px dashed var(--line)}
+  .c-list li:last-child{border-bottom:0}
+  .c-list svg{width:15px;height:15px;flex:0 0 auto;color:var(--red)}
+  .c-list a{color:var(--ink);text-decoration:none}
+  .c-list a:hover{color:var(--red)}
+
+  /* 技能 */
+  .skill-block{margin-bottom:17px}
+  .skill-block:last-child{margin-bottom:0}
+  .skill-k{font-size:12px;color:var(--red);letter-spacing:2.5px;margin-bottom:7px;font-family:'Spectral','Times New Roman',serif;font-weight:700;text-transform:uppercase}
+  .skill-txt{font-size:14px;color:var(--muted);text-wrap:pretty}
+  .badge{display:inline-block;border:1px solid var(--line2);color:var(--ink);border-radius:2px;padding:2px 9px;font-size:13px;font-family:'Noto Serif SC','Songti SC','SimSun',serif;margin:7px 7px 0 0;background:var(--cream)}
+
+  /* 时间轴 */
+  .timeline{list-style:none}
+  .tl-item{display:grid;grid-template-columns:minmax(0,132px) 16px minmax(0,1fr);gap:14px;position:relative;padding-bottom:26px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-time{font-family:'Spectral','Times New Roman',serif;font-size:13.5px;color:var(--ink-2);padding-top:3px;text-align:right;white-space:nowrap;font-weight:600;display:inline-block}
+  .tl-axis{position:relative}
+  .tl-axis .dot{position:absolute;left:50%;top:6px;transform:translateX(-50%);width:11px;height:11px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--cream-2)}
+  .tl-axis .line{position:absolute;left:50%;top:19px;bottom:-6px;width:1px;background:var(--line2);transform:translateX(-50%)}
+  .tl-item:last-child .tl-axis .line{display:none}
+  .tl-title{font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:17px;font-weight:700;color:var(--ink)}
+  .tl-org{color:var(--red);font-size:13.5px;margin-top:2px;letter-spacing:.5px}
+  .tl-body{color:var(--muted);font-size:14px;margin-top:9px;text-wrap:pretty}
+  .tl-body ul{padding-left:18px;list-style:none}
+  .tl-body ul li{position:relative;padding:3px 0}
+  .tl-body ul li::before{content:"";position:absolute;left:-13px;top:.85em;width:5px;height:5px;background:var(--red)}
+
+  /* 荣誉（微缩证书卡） */
+  .honors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .honor{
+    background:var(--paper);border:1px solid var(--line2);box-shadow:0 0 0 3px var(--cream-2);
+    padding:12px 15px;position:relative;cursor:zoom-in;
+    transition:border-color .25s ease,box-shadow .25s ease;
+    transform-style:preserve-3d;will-change:transform;
+  }
+  .honor:hover{border-color:var(--red)}
+  .honor b{font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:14.5px;font-weight:700;color:var(--ink)}
+  .honor span{display:block;color:var(--muted);font-size:12.5px;margin-top:3px;font-family:'Spectral','Times New Roman',serif}
+  .honor::before{content:"◆";color:var(--red);font-size:9px;position:absolute;top:9px;right:11px}
+
+  /* 自我评价（首字下沉 · 印刷趣味） */
+  .eval p{color:var(--muted);font-size:14.5px;margin-bottom:12px;text-align:justify;text-wrap:pretty}
+  .eval p:last-child{margin-bottom:0}
+  .eval .drop::first-letter{
+    font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:34px;font-weight:900;color:var(--red);
+    float:left;line-height:.9;padding:6px 8px 0 0;
+  }
+
+  /* ===== 报尾 colophon（报刊版权条） ===== */
+  .colophon{margin-top:34px;padding-top:16px;border-top:1px solid var(--line2);position:relative}
+  .colophon::before{content:"";position:absolute;left:0;right:0;top:-4px;height:1px;background:var(--red)}
+  .co-row{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:13px;letter-spacing:1px}
+  .co-row .latin{font-family:'Spectral','Times New Roman',serif;font-size:13px;letter-spacing:2px;color:var(--ink)}
+  .co-meta{margin-top:8px;text-align:center;color:var(--faint);font-size:11.5px;letter-spacing:1px}
+  .colophon .red{color:var(--red)}
+
+  /* ===== 基础动效（一个编排时刻 + 滚动揭示） ===== */
+  .m-rule{transform-origin:center;animation:ruleGrow .9s cubic-bezier(.2,.8,.2,1) .15s both}
+  @keyframes ruleGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  .m-fade{animation:fadeUp .7s ease .1s both}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .reveal{opacity:0;transform:translateY(16px) scale(.985);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ============ 动效层（Level 2 强烈档） ============ */
+  /* ② Hero 粒子河（Three.js 画布，置于纸张顶部） */
+  #hero-canvas{position:absolute;top:0;left:0;right:0;height:460px;z-index:0;pointer-events:none;opacity:.5}
+  .masthead,.toc,.columns,.colophon{position:relative;z-index:1}
+
+  /* ① 加载粒子拼名 */
+  #preloader{position:fixed;inset:0;z-index:9999;background:var(--cream);display:flex;align-items:center;justify-content:center;transition:opacity .7s ease,visibility .7s}
+  #preloader.done{opacity:0;visibility:hidden}
+  #preloader canvas{width:280px;max-width:80vw;height:120px}
+
+  /* ③ 双层 cursor + 磁吸 */
+  #cursor-dot,#cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9998;border-radius:50%;display:none}
+  @media (hover:hover) and (pointer:fine){
+    body.has-fine-pointer #cursor-dot{display:block;width:6px;height:6px;background:var(--red)}
+    body.has-fine-pointer #cursor-ring{display:block;width:34px;height:34px;border:1px solid var(--red);transition:width .25s,height .25s,border-color .25s,background .25s}
+    body.has-fine-pointer #cursor-ring.mag{width:62px;height:62px;background:rgba(198,60,51,.08);border-color:var(--ink)}
+    body.has-fine-pointer a,body.has-fine-pointer button,body.has-fine-pointer .honor{cursor:none}
+  }
+
+  /* ⑤ 大标题逐字（letter-spacing 收拢 + 字母逐个） */
+  .name .ltr{display:inline-block;opacity:0;letter-spacing:.55em;transform:translateY(.18em);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1),letter-spacing 1.1s ease}
+  .name.ltr-in .ltr{opacity:1;transform:none;letter-spacing:.22em}
+
+  /* ⑦ 章节扉页砸出 */
+  .sec-no{transform-origin:left bottom}
+  .sec-no.slam{animation:slam .8s cubic-bezier(.2,.9,.25,1.25) both}
+  @keyframes slam{0%{opacity:0;transform:scale(2.6) rotate(-8deg)}60%{opacity:1;transform:scale(.92) rotate(2deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+
+  /* ⑥ 数字 odometer 缩放弹出 */
+  .tl-time,.honor span{transition:transform .3s ease}
+  .tl-time.pop,.honor span.pop{transform:scale(1.08);color:var(--red)}
+
+  /* ⑧ lightbox（证书放大） */
+  #lightbox{position:fixed;inset:0;z-index:9997;background:rgba(28,39,64,.55);display:none;align-items:center;justify-content:center;padding:24px}
+  #lightbox.open{display:flex}
+  #lightbox .plate{background:var(--paper);border:1px solid var(--line2);box-shadow:0 0 0 6px var(--cream),0 30px 60px rgba(0,0,0,.3);max-width:420px;width:100%;padding:38px 34px;position:relative;transform:scale(.85) rotate(-2deg);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+  #lightbox.open .plate{transform:scale(1) rotate(0)}
+  #lightbox .lname{font-family:'Noto Serif SC',serif;font-size:24px;font-weight:900;color:var(--ink);text-align:center;letter-spacing:2px}
+  #lightbox .lm{font-family:'Spectral',serif;color:var(--red);text-align:center;letter-spacing:4px;font-size:12px;margin-top:10px;text-transform:uppercase}
+  #lightbox .lmark{margin-top:22px;text-align:center;color:var(--faint);font-size:11px;letter-spacing:2px}
+  #lightbox .close{position:absolute;top:-14px;right:-14px;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--cream);border:0;font-size:18px;line-height:1;cursor:pointer;font-family:inherit}
+  #lightbox .close:hover{background:var(--red)}
+
+  /* ⑨ 信封 + 邮戳 */
+  .env{width:124px;height:80px;margin:6px auto 16px;position:relative}
+  .env .body{position:absolute;inset:0;background:var(--paper);border:1px solid var(--line2);box-shadow:0 2px 0 var(--line)}
+  .env .flap{position:absolute;top:0;left:0;right:0;height:0;border-left:62px solid transparent;border-right:62px solid transparent;border-top:48px solid var(--cream-2);border-bottom:0;transform-origin:top center;transition:transform .9s cubic-bezier(.2,.8,.2,1);z-index:2;filter:drop-shadow(0 1px 0 var(--line))}
+  .env.open .flap{transform:rotateX(180deg)}
+  .env .stamp{position:absolute;top:-6px;right:4px;width:46px;height:46px;border-radius:50%;border:2px solid var(--red);color:var(--red);font-family:'Spectral',serif;font-size:9px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.15;transform:rotate(14deg) scale(.4);opacity:0;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.9,.25,1.3);background:var(--paper);z-index:3}
+  .env.open .stamp{opacity:1;transform:rotate(-8deg) scale(1)}
+
+  /* ⑩ 全局后处理：胶片颗粒 + 暗角 */
+  #grain{position:fixed;inset:-60px;z-index:9996;pointer-events:none;opacity:.055;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    animation:grain 8s steps(10) infinite}
+  @keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,3%)}}
+  #vignette{position:fixed;inset:0;z-index:9995;pointer-events:none;background:radial-gradient(ellipse at center, transparent 58%, rgba(28,39,64,.13) 100%)}
+
+  /* ===== 响应式 ===== */
+  @media (max-width:900px){
+    .sheet{padding:26px 22px 26px}
+    .columns{grid-template-columns:1fr;gap:26px}
+    .tl-item{grid-template-columns:minmax(0,104px) 16px minmax(0,1fr);gap:8px}
+    .tl-time{text-align:left}
+    .toc-list{grid-template-columns:1fr 1fr}
+    .toc-list li:nth-last-child(-n+2){border-bottom:1px dotted var(--line)}
+    .toc-list li:last-child{border-bottom:0}
+  }
+  @media (max-width:560px){
+    body{padding:12px 8px}
+    .sheet{padding:20px 14px 24px;box-shadow:0 10px 28px rgba(28,39,64,.16)}
+    .name{font-size:32px;letter-spacing:5px;text-indent:5px}
+    .name .ltr{letter-spacing:.3em}
+    .name.ltr-in .ltr{letter-spacing:.12em}
+    .headline{font-size:20px;letter-spacing:2px;padding:7px 16px}
+    .btn-print{position:static;margin:12px auto 0;display:block;min-height:44px;width:120px}
+    .eyebrow{font-size:13px;letter-spacing:3px}
+    .kicker{font-size:12.5px;letter-spacing:2px}
+    .toc-head{font-size:13px}
+    .toc-list li{font-size:14px}
+    .toc-list .t-en{font-size:12px}
+    .sec-en{font-size:12px}
+    .skill-k{font-size:13px;letter-spacing:2px}
+    .badge{font-size:13.5px}
+    .toc-list{grid-template-columns:1fr}
+    .toc-list li:nth-last-child(-n+2){border-bottom:1px dotted var(--line)}
+    .toc-list li:last-child{border-bottom:0}
+    .honors{grid-template-columns:1fr}
+    .c-list li a{min-height:44px;display:inline-flex;align-items:center}
+    .contacts a{min-height:44px}
+    .skill-txt{font-size:14.5px}
+    .tl-item{display:block;padding-bottom:20px}
+    .tl-axis{display:none}
+    .tl-time{text-align:left;white-space:normal;color:var(--red);margin-bottom:2px}
+    .tl-body ul{padding-left:16px}
+    #hero-canvas{height:360px}
+  }
+
+  /* ===== 打印 ===== */
+  @media print{
+    body{background:#fff;padding:0}
+    .sheet{box-shadow:none;border:0;max-width:100%;padding:0;overflow:visible}
+    .panel,.honor,.toc{box-shadow:none;background:#fff;break-inside:avoid}
+    .btn-print{display:none}
+    .avatar{filter:none}
+    .m-rule,.m-fade{animation:none}
+    .reveal{opacity:1;transform:none}
+    .name .ltr{opacity:1;letter-spacing:inherit;transform:none}
+    #preloader,#cursor-dot,#cursor-ring,#grain,#vignette,#hero-canvas,#lightbox{display:none!important}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .m-rule,.m-fade{animation:none}
+    .reveal{opacity:1;transform:none;transition:none}
+    .honor{transition:none}
+    .name .ltr{opacity:1;letter-spacing:inherit;transform:none;transition:none}
+    .sec-no.slam{animation:none}
+    .env .flap{transition:none}
+    .env .stamp{transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ===== 报头（报刊名目） ===== -->
+  <header class="masthead m-fade">
+    <button class="btn-print" type="button" onclick="window.print()">打印本页</button>
+    <div class="eyebrow"><span class="latin">CURRICULUM VITAE</span> · <span class="zh">个人简历</span></div>
+    <div class="avatarwrap"><img class="avatar" src="建站资料/33.jpg" alt="周娇证件照"></div>
+    <h1 class="name serif">周娇</h1>
+    <div class="dateline">
+      <span>滇池学院 · 数字媒体技术专业</span><span class="d">◆</span><span>昆明</span><span class="d">◆</span><span class="latin">2022 — 2027</span>
+    </div>
+    <span class="kicker latin">JOB INTENTION · 求职意向</span>
+    <h2 class="headline serif">平面设计 / 印前排版</h2>
+    <div class="contacts">
+      <a href="javascript:void(0)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l1.5 3.5-2 1.5a13 13 0 0 0 6 6l1.5-2L19 15v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        191****2821
+      </a>
+      <a href="javascript:void(0)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg>
+        335****@qq.com
+      </a>
+    </div>
+    <div class="mast-rule m-rule"></div>
+  </header>
+
+  <!-- ===== 目录 CONTENTS ===== -->
+  <nav class="toc reveal" aria-label="本刊栏目">
+    <div class="toc-head"><span class="latin">CONTENTS</span> · <span class="zh">本刊栏目</span></div>
+    <ol class="toc-list">
+      <li><i>甲</i>联系方式<span class="t-en">Contact</span></li>
+      <li><i>乙</i>专业技能<span class="t-en">Skills</span></li>
+      <li><i>丙</i>办公技能<span class="t-en">Office</span></li>
+      <li><i>壹</i>教育经历<span class="t-en">Education</span></li>
+      <li><i>贰</i>实践经历<span class="t-en">Experience</span></li>
+      <li><i>叁</i>荣誉证书<span class="t-en">Certificates</span></li>
+      <li><i>肆</i>自我评价<span class="t-en">Profile</span></li>
+    </ol>
+  </nav>
+
+  <div class="columns">
+
+    <!-- ===== 前部卷首（甲·乙·丙） ===== -->
+    <aside class="rail">
+
+      <section class="panel reveal">
+        <div class="sechead"><span class="sec-register latin">Front Matter</span><span class="sec-no serif">甲</span><div class="sechead-body"><span class="sec-en latin">Contact</span><h2 class="sec-title">联系方式</h2></div></div>
+        <div class="secline"></div>
+        <ul class="c-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg><a href="javascript:void(0)">335****@qq.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l1.5 3.5-2 1.5a13 13 0 0 0 6 6l1.5-2L19 15v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><a href="javascript:void(0)">191****2821</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-3 9-8 9s-8-4-8-9a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>昆明</li>
+        </ul>
+      </section>
+
+      <section class="panel reveal">
+        <div class="sechead"><span class="sec-register latin">Front Matter</span><span class="sec-no serif">乙</span><div class="sechead-body"><span class="sec-en latin">Skills</span><h2 class="sec-title">专业技能</h2></div></div>
+        <div class="secline"></div>
+        <div class="skill-block">
+          <div class="skill-k">平面设计 / 视觉</div>
+          <div class="skill-txt">熟练使用 AI、PS 进行视觉设计与图片精修，具备扎实的平面构成与色彩功底</div>
+          <div><span class="badge">Photoshop</span><span class="badge">Illustrator</span><span class="badge">平面构成</span></div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-k">影视后期 / 动效</div>
+          <div class="skill-txt">掌握 AE 动态特效制作与影视后期剪辑，能独立完成包装与成片</div>
+          <div><span class="badge">After Effects</span><span class="badge">影视后期</span></div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-k">三维 / 建模</div>
+          <div class="skill-txt">掌握 C4D 三维建模与渲染</div>
+          <div><span class="badge">Cinema 4D</span></div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-k">短视频 / 剪辑</div>
+          <div class="skill-txt">擅长用剪映快速完成短视频剪辑、调色与成片输出；熟悉短视频平台运营</div>
+          <div><span class="badge">剪映</span><span class="badge">抖音</span></div>
+        </div>
+        <div class="skill-block">
+          <div class="skill-k">UI 界面</div>
+          <div class="skill-txt">熟悉 UI 界面设计思路与移动端界面实训</div>
+        </div>
+      </section>
+
+      <section class="panel reveal">
+        <div class="sechead"><span class="sec-register latin">Front Matter</span><span class="sec-no serif">丙</span><div class="sechead-body"><span class="sec-en latin">Office</span><h2 class="sec-title">办公技能</h2></div></div>
+        <div class="secline"></div>
+        <div class="skill-txt">熟练运用 Office 全套软件；精通 Word 排版撰写、Excel 数据整理统计与表格制作；可独立完成公文编辑、资料汇总、报表制作。</div>
+      </section>
+
+    </aside>
+
+    <!-- ===== 篇章专题（壹·贰·叁·肆） ===== -->
+    <main class="main">
+
+      <section class="panel reveal">
+        <div class="sechead"><span class="sec-register latin">Feature</span><span class="sec-no serif">壹</span><div class="sechead-body"><span class="sec-en latin">Education</span><h2 class="sec-title">教育经历</h2></div></div>
+        <div class="secline"></div>
+        <ul class="timeline">
+          <li class="tl-item">
+            <div class="tl-time latin">2022.09 — 2027.07</div>
+            <div class="tl-axis"><span class="dot"></span><span class="line"></span></div>
+            <div>
+              <div class="tl-title serif">数字媒体技术 · 本科</div>
+              <div class="tl-org">滇池学院</div>
+              <div class="tl-body">
+                主修：图形图像处理、数字视音频处理、网页设计、交互设计基础、增强现实技术、平面设计、三大构成、设计色彩等。
+                实训：影视后期制作、插画设计实训、品牌 VI 识别系统实训、移动端界面实训。
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel reveal">
+        <div class="sechead"><span class="sec-register latin">Feature</span><span class="sec-no serif">贰</span><div class="sechead-body"><span class="sec-en latin">Experience</span><h2 class="sec-title">实践经历</h2></div></div>
+        <div class="secline"></div>
+        <ul class="timeline">
+          <li class="tl-item">
+            <div class="tl-time latin">2025.07 — 2025.09</div>
+            <div class="tl-axis"><span class="dot"></span><span class="line"></span></div>
+            <div>
+              <div class="tl-title serif">宣传短视频制作</div>
+              <div class="tl-org">初卓艺术教育 · 培训 / 课外教育</div>
+              <div class="tl-body">
+                <ul>
+                  <li>自主拍摄录制日常场景与实拍素材，结合审美进行画面构图、剪辑优化，制作优质宣传短视频并发布至抖音等平台，打造线上视觉宣传，提升曝光度，吸引意向客户咨询。</li>
+                  <li>负责客户日常接待沟通，线上对接意向客户，精准挖掘客户偏好与需求，做好前期需求梳理与意向对接；项目完成后收集客户体验反馈，跟进修改意见，高效协调对接全流程工作。</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel reveal">
+        <div class="sechead"><span class="sec-register latin">Feature</span><span class="sec-no serif">叁</span><div class="sechead-body"><span class="sec-en latin">Certificates</span><h2 class="sec-title">荣誉证书</h2></div></div>
+        <div class="secline"></div>
+        <div class="honors">
+          <div class="honor"><b>普通话证书</b><span>2023.07</span></div>
+          <div class="honor"><b>计算机二级证书</b><span>2023.12</span></div>
+          <div class="honor"><b>创新创业大赛优秀奖</b><span>2023.04</span></div>
+          <div class="honor"><b>心理健康专题竞赛特等奖</b><span>2023.09</span></div>
+          <div class="honor"><b>驾驶证</b><span>2024.12</span></div>
+        </div>
+      </section>
+
+      <section class="panel reveal">
+        <div class="sechead"><span class="sec-register latin">Feature</span><span class="sec-no serif">肆</span><div class="sechead-body"><span class="sec-en latin">Profile</span><h2 class="sec-title">自我评价</h2></div></div>
+        <div class="secline"></div>
+        <div class="eval">
+          <p class="drop">通过在校学习掌握了专业相关知识技能，具备良好的道德修养与专业素养。</p>
+          <p>具有良好团队精神，为人品行端正、诚实可靠、具有亲和力，能独立完成工作。</p>
+          <p>性格开朗热情，做事认真负责，适应能力强，具备良好的团队合作精神与抗压能力，面对挑战保持乐观态度。</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ===== 报尾版权条 ===== -->
+  <footer class="colophon">
+    <div class="co-row">
+      <span class="latin">ZHOU JIAO</span>
+      <span>滇池学院 · 数字媒体技术专业</span>
+      <span class="red">平面设计 / 印前排版</span>
+    </div>
+    <div class="co-meta latin">RESUME · VOL. I · 第 1 页 — 简历单页</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine   = window.matchMedia('(hover:hover) and (pointer: fine)').matches;
+  if(fine) document.body.classList.add('has-fine-pointer');
+  function loadJS(src){return new Promise(function(res){var s=document.createElement('script');s.src=src;s.async=true;s.onload=function(){res(true)};s.onerror=function(){res(false)};document.head.appendChild(s);});}
+
+  /* ===== ⑩ 全局后处理：颗粒 + 暗角（常驻，零依赖） ===== */
+  (function(){
+    var g=document.createElement('div');g.id='grain';
+    var v=document.createElement('div');v.id='vignette';
+    document.body.appendChild(g);document.body.appendChild(v);
+  })();
+
+  /* ===== ③ 双层 cursor + 磁吸 ===== */
+  if(fine && !reduce){
+    var dot=document.createElement('div');dot.id='cursor-dot';
+    var ring=document.createElement('div');ring.id='cursor-ring';
+    document.body.appendChild(dot);document.body.appendChild(ring);
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+    (function loop(){rx+=(mx-rx)*0.16;ry+=(my-ry)*0.16;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+    var mag='a,button,.honor,.badge';
+    document.addEventListener('mouseover',function(e){if(e.target.closest(mag))ring.classList.add('mag');});
+    document.addEventListener('mouseout',function(e){if(e.target.closest(mag))ring.classList.remove('mag');});
+  }
+
+  /* ===== ⑤ 大标题逐字（先拆字，失败也可读） ===== */
+  var nameEl=document.querySelector('.name');
+  if(nameEl){
+    var txt=nameEl.textContent;nameEl.textContent='';
+    for(var i=0;i<txt.length;i++){
+      var sp=document.createElement('span');sp.className='ltr';sp.textContent=txt[i];
+      sp.style.transitionDelay=(0.15+i*0.14)+'s';nameEl.appendChild(sp);
+    }
+  }
+
+  /* ===== ① 加载入场：粒子拼名字 ===== */
+  var pre=document.createElement('div');pre.id='preloader';
+  var pcan=document.createElement('canvas');pre.appendChild(pcan);
+  document.body.appendChild(pre);
+  function hidePre(){pre.classList.add('done');if(nameEl)nameEl.classList.add('ltr-in');}
+  if(reduce){pre.parentNode.removeChild(pre);if(nameEl)nameEl.classList.add('ltr-in');}
+  else{
+    (function(){
+      var dpr=Math.min(window.devicePixelRatio||1,2),W=280,H=120;
+      pcan.width=W*dpr;pcan.height=H*dpr;pcan.style.width=W+'px';pcan.style.height=H+'px';
+      var ctx=pcan.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);
+      var off=document.createElement('canvas');off.width=W;off.height=H;var o=off.getContext('2d');
+      o.fillStyle='#1C2740';o.font='900 74px "Noto Serif SC",serif';o.textAlign='center';o.textBaseline='middle';
+      o.fillText('周娇',W/2,H/2+4);
+      var data=o.getImageData(0,0,W,H).data,pts=[];
+      for(var y=0;y<H;y+=3)for(var x=0;x<W;x+=3){if(data[(y*W+x)*4+3]>128)pts.push([x,y]);}
+      var parts=pts.map(function(p){return {x:Math.random()*W,y:Math.random()*H,tx:p[0],ty:p[1],c:(Math.random()<0.16?'#C63C33':'#1C2740')};});
+      var t0=performance.now(),done=false;
+      function frame(t){
+        var el=(t-t0)/1300;if(el>1)el=1;
+        ctx.clearRect(0,0,W,H);
+        for(var i=0;i<parts.length;i++){var p=parts[i];p.x+=(p.tx-p.x)*0.09;p.y+=(p.ty-p.y)*0.09;ctx.fillStyle=p.c;ctx.fillRect(p.x,p.y,1.6,1.6);}
+        if(el<1&&!done)requestAnimationFrame(frame);
+        else if(!done){done=true;setTimeout(hidePre,380);}
+      }
+      requestAnimationFrame(frame);
+      setTimeout(hidePre,2600); /* 安全兜底，永不卡死 */
+    })();
+  }
+
+  /* ===== ⑨ 联系页：信封 + 邮戳（注入到联系方式面板） ===== */
+  var cList=document.querySelector('.c-list');
+  if(cList){
+    var env=document.createElement('div');env.className='env';
+    env.innerHTML='<div class="body"></div><div class="flap"></div><div class="stamp">昆明<br>POST<br>2026</div>';
+    cList.parentElement.insertBefore(env,cList);
+  }
+
+  /* ===== ④⑥⑦ 滚动揭示 / odometer / 扉页砸出（原生 IntersectionObserver，CDN 无关） ===== */
+  function odometer(el){
+    if(el.dataset.done)return;el.dataset.done='1';
+    var re=/(\d+)/g,html=el.innerHTML,out='',last=0,m;
+    while((m=re.exec(html))!==null){
+      out+=html.slice(last,m.index);
+      out+='<span class="od" data-v="'+m[1]+'">0</span>';
+      last=m.index+m[0].length;
+    }
+    out+=html.slice(last);el.innerHTML=out;
+    var spans=el.querySelectorAll('.od');
+    Array.prototype.forEach.call(spans,function(sp){
+      var v=parseInt(sp.getAttribute('data-v'),10)||0,from=Math.max(0,v-22),st=performance.now(),D=900;
+      function f(t){var p=(t-st)/D;if(p>1)p=1;var e=1-Math.pow(1-p,3);sp.textContent=Math.round(from+(v-from)*e);if(p<1){requestAnimationFrame(f);}else{el.classList.add('pop');setTimeout(function(){el.classList.remove('pop');},320);}}
+      requestAnimationFrame(f);
+    });
+  }
+
+  var revealEls=document.querySelectorAll('.reveal');
+  function actPanel(p){
+    var sn=p.querySelector('.sec-no');if(sn)sn.classList.add('slam');
+    p.querySelectorAll('.tl-time,.honor span').forEach(odometer);
+    var en=p.querySelector('.env');if(en)en.classList.add('open');
+  }
+  if(reduce||!('IntersectionObserver' in window)){
+    revealEls.forEach(function(e){e.classList.add('in');actPanel(e);});
+  }else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');actPanel(en.target);io.unobserve(en.target);}
+      });
+    },{threshold:0.14});
+    revealEls.forEach(function(e){io.observe(e);});
+  }
+
+  /* ===== ⑧ 作品/证书：3D 倾斜 + lightbox ===== */
+  var lb=document.createElement('div');lb.id='lightbox';
+  lb.innerHTML='<div class="plate"><button class="close" aria-label="关闭">×</button><div class="lname"></div><div class="lm"></div><div class="lmark">◆ 滇池学院 · 平面设计 / 印前排版 ◆</div></div>';
+  document.body.appendChild(lb);
+  var honors=document.querySelectorAll('.honor');
+  honors.forEach(function(h){
+    h.addEventListener('click',function(){
+      document.querySelector('#lightbox .lname').textContent=h.querySelector('b').textContent;
+      document.querySelector('#lightbox .lm').textContent=h.querySelector('span').textContent;
+      lb.classList.add('open');
+    });
+    if(fine&&!reduce){
+      h.addEventListener('mousemove',function(e){
+        var r=h.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
+        h.style.transform='perspective(620px) rotateY('+(px*9)+'deg) rotateX('+(-py*9)+'deg) translateY(-3px)';
+      });
+      h.addEventListener('mouseleave',function(){h.style.transform='';});
+    }
+  });
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.closest('.close'))lb.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});
+
+  /* ===== ② Hero 首屏：沉浸 3D + 粒子河（Three.js CDN，失败自动跳过） ===== */
+  loadJS('https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js').then(function(ok){
+    if(!ok||reduce||typeof THREE==='undefined')return;
+    try{
+      var sheet=document.querySelector('.sheet');
+      var hc=document.createElement('canvas');hc.id='hero-canvas';
+      sheet.insertBefore(hc,sheet.firstChild);
+      var renderer=new THREE.WebGLRenderer({canvas:hc,alpha:true,antialias:true});
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+      var scene=new THREE.Scene();
+      var camera=new THREE.PerspectiveCamera(60,1,0.1,100);camera.position.z=14;
+      var N=480,pos=new Float32Array(N*3),col=new Float32Array(N*3);
+      var pal=[new THREE.Color('#1C2740'),new THREE.Color('#C63C33'),new THREE.Color('#A89B7E')];
+      for(var i=0;i<N;i++){
+        pos[i*3]=(Math.random()-.5)*24;pos[i*3+1]=(Math.random()-.5)*9;pos[i*3+2]=(Math.random()-.5)*6;
+        var c=pal[Math.random()<0.68?0:(Math.random()<0.5?1:2)];
+        col[i*3]=c.r;col[i*3+1]=c.g;col[i*3+2]=c.b;
+      }
+      var g=new THREE.BufferGeometry();
+      g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+      g.setAttribute('color',new THREE.BufferAttribute(col,3));
+      var m=new THREE.PointsMaterial({size:0.1,vertexColors:true,transparent:true,opacity:0.75,depthWrite:false});
+      var pts=new THREE.Points(g,m);scene.add(pts);
+      function size(){var w=hc.clientWidth||1000,h=hc.clientHeight||460;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
+      size();addEventListener('resize',size);
+      var visible=true;new IntersectionObserver(function(e){visible=e[0].isIntersecting;}).observe(hc);
+      (function anim(t){
+        requestAnimationFrame(anim);if(!visible)return;
+        pts.rotation.y=t*0.00004;
+        for(var i=0;i<N;i++){pos[i*3]+=0.025;if(pos[i*3]>12)pos[i*3]=-12;}
+        g.attributes.position.needsUpdate=true;
+        renderer.render(scene,camera);
+      })(0);
+    }catch(err){ /* WebGL 不可用则静默降级 */ }
+  });
+})();
+</script>
+</body>
+</html>
